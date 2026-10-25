@@ -1,6 +1,6 @@
 ---
 name: sendora-voice-business
-description: Business guide to writing voice agent prompts that sound human and convert: structure, a full outbound and inbound prompt template, objection handling, voicemail, opening lines by call type, style rules, compliance lines, knowledge versus prompt, and an improvement loop from call transcripts.
+description: "Business guide to writing voice agent prompts that sound human and convert: structure, a full outbound and inbound prompt template, objection handling, voicemail, opening lines by call type, style rules, compliance lines, knowledge versus prompt, and an improvement loop from call transcripts."
 ---
 
 # Voice agents: prompt and call playbook

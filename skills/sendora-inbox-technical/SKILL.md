@@ -1,6 +1,6 @@
 ---
 name: sendora-inbox-technical
-description: Technical guide to replies and conversations via the MCP: the inbox, sending messages, chat agents for SMS and WhatsApp, approvals, escalations, tasks, meetings.
+description: "Technical guide to replies and conversations via the MCP: the inbox, sending messages, chat agents for SMS and WhatsApp, approvals, escalations, tasks, meetings."
 ---
 
 # Inbox, chat agents, work items: technical guide

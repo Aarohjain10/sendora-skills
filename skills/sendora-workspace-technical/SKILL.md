@@ -1,6 +1,6 @@
 ---
 name: sendora-workspace-technical
-description: Technical guide to workspace administration via the MCP: integrations and CRMs, webhooks, team and access, settings, billing reads.
+description: "Technical guide to workspace administration via the MCP: integrations and CRMs, webhooks, team and access, settings, billing reads."
 ---
 
 # Workspace administration: technical guide

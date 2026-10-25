@@ -1,6 +1,6 @@
 ---
 name: sendora-foundation-technical
-description: Read first. How the Sendora MCP is organised, standing safety and compliance rules, how to audit a workspace, and how to troubleshoot. Every other Sendora guide assumes this one.
+description: "Read first. How the Sendora MCP is organised, standing safety and compliance rules, how to audit a workspace, and how to troubleshoot. Every other Sendora guide assumes this one."
 ---
 
 # Sendora: start here

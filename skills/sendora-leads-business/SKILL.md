@@ -1,6 +1,6 @@
 ---
 name: sendora-leads-business
-description: Business and sales guide to finding good leads for any business with Sendora: define the ICP, choose between cold fit-based and intent-led outbound, signal ladder, ready-made filter recipes, list sizing and quality checks, qualification, and how to ask for help when a signal source is not in the MCP.
+description: "Business and sales guide to finding good leads for any business with Sendora: define the ICP, choose between cold fit-based and intent-led outbound, signal ladder, ready-made filter recipes, list sizing and quality checks, qualification, and how to ask for help when a signal source is not in the MCP."
 ---
 
 # Leads: business playbook

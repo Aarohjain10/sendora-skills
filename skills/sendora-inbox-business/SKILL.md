@@ -1,6 +1,6 @@
 ---
 name: sendora-inbox-business
-description: Business guide to handling replies and conversations: triage order, response templates for every reply type, meeting booking, objection handling in writing, when to hand to a human, chat agent behaviour on SMS and WhatsApp, response time targets, and pipeline hygiene.
+description: "Business guide to handling replies and conversations: triage order, response templates for every reply type, meeting booking, objection handling in writing, when to hand to a human, chat agent behaviour on SMS and WhatsApp, response time targets, and pipeline hygiene."
 ---
 
 # Replies and conversations playbook

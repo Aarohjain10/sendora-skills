@@ -1,6 +1,6 @@
 ---
 name: sendora-foundation-business
-description: End to end go to market playbook on Sendora: the six phase plan and seven motion recipes (cold email, AI calling, LinkedIn, inbound response, appointment setting, reactivation, agency client launch) that point to the right technical guides and playbooks.
+description: "End to end go to market playbook on Sendora: the six phase plan and seven motion recipes (cold email, AI calling, LinkedIn, inbound response, appointment setting, reactivation, agency client launch) that point to the right technical guides and playbooks."
 ---
 
 # GTM playbook

@@ -1,6 +1,6 @@
 ---
 name: sendora-agency-technical
-description: Technical guide for agencies via the MCP: client workspaces, limits and access, packages, markup pricing, branding and onboarding.
+description: "Technical guide for agencies via the MCP: client workspaces, limits and access, packages, markup pricing, branding and onboarding."
 ---
 
 # Agency: technical guide

@@ -1,6 +1,6 @@
 ---
 name: sendora-channels-technical
-description: Technical guide to sending infrastructure via the MCP: email accounts and warmup, domains and DNS, sender pools, deliverability tests, SMS registration, purchases with quotes. Phone numbers and caller IDs are in the voice guide.
+description: "Technical guide to sending infrastructure via the MCP: email accounts and warmup, domains and DNS, sender pools, deliverability tests, SMS registration, purchases with quotes. Phone numbers and caller IDs are in the voice guide."
 ---
 
 # Channels and infrastructure: technical guide

@@ -1,6 +1,6 @@
 ---
 name: sendora-analytics-technical
-description: Technical guide to reading performance through the MCP: every analytics report and its parameters, A/B results per email step and per step variant, call logs, deliverability and mailbox health, AI spend, activity and action queues, with ids, windows and limits.
+description: "Technical guide to reading performance through the MCP: every analytics report and its parameters, A/B results per email step and per step variant, call logs, deliverability and mailbox health, AI spend, activity and action queues, with ids, windows and limits."
 ---
 
 # Analytics: technical guide

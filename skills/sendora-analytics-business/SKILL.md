@@ -1,6 +1,6 @@
 ---
 name: sendora-analytics-business
-description: Business guide to turning Sendora numbers into decisions: the weekly review routine, metric definitions and benchmarks, how to read A/B tests, a diagnosis tree for drops, keep or cut or scale rules, and report formats for owners and clients.
+description: "Business guide to turning Sendora numbers into decisions: the weekly review routine, metric definitions and benchmarks, how to read A/B tests, a diagnosis tree for drops, keep or cut or scale rules, and report formats for owners and clients."
 ---
 
 # Analytics: business guide

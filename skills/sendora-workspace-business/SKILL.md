@@ -1,6 +1,6 @@
 ---
 name: sendora-workspace-business
-description: Business guide for running a Sendora workspace well: who gets which role, onboarding and offboarding people, choosing and governing integrations and webhooks, controlling credit spend, keeping settings and consents healthy, and a quarterly workspace review.
+description: "Business guide for running a Sendora workspace well: who gets which role, onboarding and offboarding people, choosing and governing integrations and webhooks, controlling credit spend, keeping settings and consents healthy, and a quarterly workspace review."
 ---
 
 # Workspace: business guide

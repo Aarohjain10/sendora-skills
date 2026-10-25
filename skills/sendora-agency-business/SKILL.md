@@ -1,6 +1,6 @@
 ---
 name: sendora-agency-business
-description: Business guide for agencies reselling outbound on Sendora: packaging and pricing the service, onboarding a client in a fixed timeline, reporting cadence, protecting reputation across clients, margins, and when to suspend or upsell.
+description: "Business guide for agencies reselling outbound on Sendora: packaging and pricing the service, onboarding a client in a fixed timeline, reporting cadence, protecting reputation across clients, margins, and when to suspend or upsell."
 ---
 
 # Agency playbook

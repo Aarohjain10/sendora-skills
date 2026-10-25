@@ -1,6 +1,6 @@
 ---
 name: sendora-channels-business
-description: Business guide to getting email and calls delivered and trusted: domain strategy, mailbox counts, warmup schedule, volume ceilings, list hygiene, content rules, monitoring thresholds, recovery from a damaged reputation, and SMS and calling reputation basics.
+description: "Business guide to getting email and calls delivered and trusted: domain strategy, mailbox counts, warmup schedule, volume ceilings, list hygiene, content rules, monitoring thresholds, recovery from a damaged reputation, and SMS and calling reputation basics."
 ---
 
 # Deliverability and sender reputation playbook

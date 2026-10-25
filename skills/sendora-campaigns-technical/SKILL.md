@@ -1,6 +1,6 @@
 ---
 name: sendora-campaigns-technical
-description: Technical guide to campaigns via the MCP: node types, building and validating a journey graph, A/B variants on nodes, journey rules, senders, enrolment, preflight, launch, pause, stop, folders, templates, clones, and reading analytics.
+description: "Technical guide to campaigns via the MCP: node types, building and validating a journey graph, A/B variants on nodes, journey rules, senders, enrolment, preflight, launch, pause, stop, folders, templates, clones, and reading analytics."
 ---
 
 # Campaigns: technical guide

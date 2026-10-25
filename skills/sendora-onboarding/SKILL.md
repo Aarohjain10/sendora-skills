@@ -1,6 +1,6 @@
 ---
 name: sendora-onboarding
-description: Set up a new Sendora workspace for the customer, as drafts only. Use when the workspace is new or empty, or the user says "set me up", "get me started" or "onboard me". Reads first, asks three questions, proposes plays, builds a knowledge base, voice agent, lead list and campaign draft, and lists what only the user can do next.
+description: "Set up a new Sendora workspace for the customer, as drafts only. Use when the workspace is new or empty, or the user says \"set me up\", \"get me started\" or \"onboard me\". Reads first, asks three questions, proposes plays, builds a knowledge base, voice agent, lead list and campaign draft, and lists what only the user can do next."
 ---
 
 # Sendora: onboard a new workspace

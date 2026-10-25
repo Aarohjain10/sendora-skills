@@ -1,6 +1,6 @@
 ---
 name: sendora-voice-technical
-description: Technical guide to voice in Sendora via the MCP: create, configure, test and publish a voice agent, attach numbers and caller IDs, inbound calls, tools, knowledge bases, voices and cloning, widgets, reviewing calls.
+description: "Technical guide to voice in Sendora via the MCP: create, configure, test and publish a voice agent, attach numbers and caller IDs, inbound calls, tools, knowledge bases, voices and cloning, widgets, reviewing calls."
 ---
 
 # Voice: technical guide

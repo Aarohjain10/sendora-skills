@@ -1,6 +1,6 @@
 ---
 name: sendora-campaigns-business
-description: Business and sales guide to designing campaigns that get replies: how to reach people across email, calls, LinkedIn, SMS and WhatsApp, ready sequences by scenario with timings, branching rules, how many A/B tests to run and how to read them, volume and pacing, reply handling, and a weekly improvement loop.
+description: "Business and sales guide to designing campaigns that get replies: how to reach people across email, calls, LinkedIn, SMS and WhatsApp, ready sequences by scenario with timings, branching rules, how many A/B tests to run and how to read them, volume and pacing, reply handling, and a weekly improvement loop."
 ---
 
 # Campaigns: sequence and outreach playbook

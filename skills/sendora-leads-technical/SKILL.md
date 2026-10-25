@@ -1,6 +1,6 @@
 ---
 name: sendora-leads-technical
-description: Technical guide to getting leads into Sendora through the MCP: lead lists, every way to add leads (single, import, B2B prospect search, Google Maps, company employees, lead requests, CRM import), exactly how previews and commits work, every filter, costs, limits and errors.
+description: "Technical guide to getting leads into Sendora through the MCP: lead lists, every way to add leads (single, import, B2B prospect search, Google Maps, company employees, lead requests, CRM import), exactly how previews and commits work, every filter, costs, limits and errors."
 ---
 
 # Leads: technical guide
