@@ -42,7 +42,7 @@ Condition operators: equals, not_equals, contains, not_contains, is_null, is_not
 | voice | `account_ids` (numbers that can place calls) |
 
 A released or not-ready number, a number that cannot do the channel, or an account from another workspace is refused with a plain 422. Binding a sender pool to a campaign does not change who sends. Set active hours with `update_config` journey rules.
-8. **Enrol a test list only.** `enroll_leads` with 2 or 3 internal leads. Do not enrol the real audience while building.
+8. **Enrol a test list only.** `enroll_leads` with 2 or 3 internal leads. Prefer not to enrol the real audience while building.
 9. **Preflight.** `read_campaigns` `prepare_outreach` and `edit_campaign` `step` with `action: "preflight"`. Resolve every blocker.
 10. **Hand over.** Summarise the journey in plain words, list what is untested, and wait for the user.
 
@@ -71,9 +71,9 @@ Each lead gets one variant for good (picked from the lead's id), so results stay
 
 **Read results:** `get_analytics` `email_variants` (email steps across a campaign) or `read_campaigns` `variants` (query `id` and `node_id`) for one step: each variant's key, assignments and outcomes.
 
-**Do not** try to add variants by writing the results table directly: the sender never reads it and the next save removes rows that are not in the workflow.
+Avoid adding variants by writing the results table directly: the sender never reads it and the next save removes rows that are not in the workflow.
 
-## Journey rules and per-step variables
+## Journey guidelines and per-step variables
 
 `edit_campaign` `update_config` with `body.config.journey_rules` sets: exit on reply, send window and send days, timezone, and the weekly touch cap. `body.config.node_variables` sets per-step variable values. Read them back with `read_campaigns` `config` and `include` of `config.journey`, `config.ai`, `config.triggers`, `config.condition_fields`, `config.dialer_eta` (pass `node_id` for one step's variables). `config.condition_fields` lists the lead fields a `condition` node can test, including custom fields.
 

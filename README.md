@@ -2,7 +2,7 @@
 
 Skills that let an AI agent run outbound on Sendora through its MCP server: leads, voice agents, campaigns, channels, the inbox, analytics, workspace admin and agency work.
 
-Each area has two skills. The technical one says which tools and fields to use, in what order. The business one says what to do and say for good results. Start with `sendora-onboarding` for a new workspace, or `sendora-foundation-technical` for the rules every other skill assumes.
+Each area has two skills. The technical one says which tools and fields to use, in what order. The business one says what to do and say for good results. These are general guidance, not strict rules: every business and situation is different, so an agent should use judgement and adapt. Skills point to each other by name only where the pointer helps. Start with `sendora-onboarding` for a new workspace, or `sendora-foundation-technical` for the basics every other skill builds on.
 
 ## Install
 
@@ -18,8 +18,8 @@ Use `-a codex` or `-a cursor` for those tools. The repository is private for now
 
 | Skill | For |
 |---|---|
-| sendora-onboarding | First setup of a new workspace, drafts only |
-| sendora-foundation-technical | MCP rules, compliance, workspace audit, troubleshooting. Read first |
+| sendora-onboarding | Learn the business, then use the other skills to build a fitting first setup as drafts |
+| sendora-foundation-technical | How the MCP works, helpful habits, compliance, workspace audit, troubleshooting. Read first |
 | sendora-foundation-business | Go to market plans and recipes |
 | sendora-leads-technical, sendora-leads-business | Lists, import, prospect search, filters |
 | sendora-voice-technical, sendora-voice-business | Voice agents, numbers, tools, knowledge, prompts |

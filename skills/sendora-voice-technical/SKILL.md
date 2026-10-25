@@ -34,17 +34,17 @@ Every field below is on `save_draft` and `update_agent`. Ranges are enforced; th
 | `max_duration_seconds` | at least 120, default 300, platform maximum applies | 300 to 480 for cold calls; 600 and up for inbound support | Stops runaway calls; set `time_exceeded_message` to close politely |
 | `join_timeout_seconds` | 5 to 300 | 30 to 60 | How long to wait for a person to join |
 | `inactivity_messages` | up to 10 | a nudge after about 8 to 10 seconds of silence ("Are you still there?"), then a polite close | Handles silence and bad lines |
-| `uninterruptible` | true or false | false; true only for a legally required statement | People must be able to cut in |
+| `uninterruptible` | true or false | false; true only for a legally required statement | People should be able to cut in |
 | `recording_enabled` | true or false | on where lawful, with a disclosure line in the opening | Needed for call review and training |
-| `voicemail_enabled` and `voicemail_script` | true or false, text | on, 15 to 20 second script | Do not waste a dial |
+| `voicemail_enabled` and `voicemail_script` | true or false, text | on, 15 to 20 second script | Prefer not to waste a dial |
 | `language_hint` | language code | match the lead's language; test accents | Better recognition |
 | `output_medium` | `voice` or `text` | `voice` for calls; `text` only for text-mode tests | |
 | `model` | model name | leave the default unless tests show a need | |
 
 Practical rules:
-- Put facts in the knowledge base and behaviour in the prompt (see `sendora-voice-business`). Do not tune settings to fix a wrong answer.
+- Put facts in the knowledge base and behaviour in the prompt (see `sendora-voice-business`). Prefer not to tune settings to fix a wrong answer.
 - Attach only the tools the call needs, and keep tool timeouts short. A slow tool is dead air.
-- Give each prompt variable a fallback so a missing value is never read aloud as "blank".
+- Give each prompt variable a fallback so a missing value is not read aloud as "blank".
 - Test inbound and outbound separately: they want different `first_speaker` values.
 - After any change, run `check_voice_agent` `validate`, then a browser test call.
 
@@ -58,13 +58,13 @@ A voice agent makes and takes calls. Build it as a draft, test it, then publish.
 
 ### Flow
 
-1. **Brief.** Capture: what the agent is for (outbound cold call, appointment setting, inbound reception, follow-up), who it speaks as, the company, the offer, the goal of the call, what it must never do, and where to hand off to a human.
+1. **Brief.** Capture: what the agent is for (outbound cold call, appointment setting, inbound reception, follow-up), who it speaks as, the company, the offer, the goal of the call, what it should avoid, and where to hand off to a human.
 2. **Check what exists.** `read_voice` `list_agents`. Reuse or clone thinking rather than duplicating.
 3. **Pick a voice.** `read_voice` `list_voices` (catalogue) and `custom_voices` (the workspace's own). `agent_voices` shows what a given agent can use. See sendora-voice-technical.
 4. **Write the prompt** (sendora-voice-business).
 5. **Validate.** `check_voice_agent` `validate` on the candidate config. Fix every issue by path.
 6. **Save a draft.** `edit_voice` `save_draft`, or `create_agent` with `draft: true`. Nothing is published and no number is assigned.
-7. **Attach knowledge and tools** (sendora-voice-technical, sendora-voice-technical): `assign_kb`, `create_tool`, or `update_agent` with `knowledge_base_ids` and `tool_ids` (these replace the current set, so send the full list).
+7. **Attach knowledge and tools** (sendora-voice-technical): `assign_kb`, `create_tool`, or `update_agent` with `knowledge_base_ids` and `tool_ids` (these replace the current set, so send the full list).
 8. **Test** (sendora-voice-technical).
 9. **Publish** only after the user says yes: `run_voice` `publish`.
 10. **Verify.** `check_voice_agent` `verify` after publishing.
@@ -79,7 +79,7 @@ A voice agent makes and takes calls. Build it as a draft, test it, then publish.
 
 ### Variables
 
-Prompts can use per-lead variables such as the lead's first name and company. Every variable used must have a value at call time or the call quality drops. The validator lists the variables an agent needs. Give test values with `update_test_context`.
+Prompts can use per-lead variables such as the lead's first name and company. Every variable used should have a value at call time or the call quality drops. The validator lists the variables an agent needs. Give test values with `update_test_context`.
 
 ### Deleting
 
@@ -160,7 +160,7 @@ Tools let the agent act during a call.
 
 - `edit_voice` `create_tool` (for an agent) or `create_workspace_tool` (reusable, set `agent_id` to limit to one agent).
 - `update_tool`, `update_workspace_tool` change a definition.
-- `test_tool`, `test_workspace_tool` run a safe test. Always test before attaching.
+- `test_tool`, `test_workspace_tool` run a safe test. It helps to test before attaching.
 - Attach to an agent with `update_agent` `tool_ids` (replaces the set, send the full list).
 
 ### Designing a custom tool
@@ -170,7 +170,7 @@ Tools let the agent act during a call.
 - Keep parameters few, each with a clear description and type.
 - Return short, speakable results. Long JSON confuses the call.
 - Set a short timeout. A slow tool is a long silence on the phone.
-- Keep secrets in the tool's auth settings. Never paste a key into a description or prompt.
+- Keep secrets in the tool's auth settings. It is better not to paste a key into a description or prompt.
 
 ### Remove
 
@@ -207,7 +207,7 @@ Tools let the agent act during a call.
 
 `delete_resource` `phone_number` releases it. `confirm_unassign` also removes it from what uses it. An imported number is only removed from the workspace. Confirm twice: a released number may be lost.
 
-### Rules
+### Guidelines
 
 Calls need a caller ID the lead will trust. Texting needs registration (sendora-channels-technical). Keep one number per agent role.
 
@@ -265,7 +265,7 @@ A widget lets a website visitor talk to an agent from the browser.
 
 `edit_voice` `create_widget` for an agent, with allowed domains, label, colours and position. `update_widget` changes them.
 
-### Rules
+### Guidelines
 
 - Restrict the widget to the customer's own domains.
 - Use a published agent. Test with `run_voice` `browser_test` first.
@@ -282,7 +282,7 @@ Give the user the embed snippet and where to paste it (before the closing body t
 
 ## 9. Test and publish
 
-Never publish untested. Never test on real leads.
+It is better not to publish untested. It is better not to test on real leads.
 
 ### Tests, cheapest first
 

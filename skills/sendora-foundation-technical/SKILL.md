@@ -1,13 +1,13 @@
 ---
 name: sendora-foundation-technical
-description: "Read first. How the Sendora MCP is organised, standing safety and compliance rules, how to audit a workspace, and how to troubleshoot. Every other Sendora guide assumes this one."
+description: "Read first. How the Sendora MCP is organised, safety and compliance habits, how to audit a workspace, and how to troubleshoot. Every other Sendora guide assumes this one."
 ---
 
 # Sendora: start here
 
 Guide index: see the README. Technical guides explain the tools. Playbooks explain what to do for good business results. Pick the pair for the job: leads, voice, campaigns, channels, inbox, workspace, agency, plus the end to end GTM playbook.
 
-## 1. How the MCP works and the standing rules
+## 1. How the MCP works and habits that help
 
 Sendora runs outbound for a workspace: leads, voice agents, chat agents, campaigns across email, SMS, LinkedIn, WhatsApp and phone, the inbox, and the sending infrastructure underneath. You control all of it through the Sendora MCP.
 
@@ -17,26 +17,28 @@ There are 27 tools. Most are grouped by resource and take an `action` field, for
 
 | Prefix | Effect |
 |---|---|
-| `read_*`, `check_*`, `get_analytics` | Only reads or validates. Never changes anything. |
+| `read_*`, `check_*`, `get_analytics` | Only reads or validates. It is better not to changes anything. |
 | `edit_*`, `enrich_leads`, `find_prospects` | Creates or changes records. |
 | `run_*`, `send_outreach` | Reaches real people or spends money. |
-| `delete_resource` | Permanent. Always confirm first. |
+| `delete_resource` | Permanent. It helps to confirm first. |
 | `launch_campaign`, `stop_campaign` | The only ways to start or stop a campaign. |
 | `call_public_api` | Fallback for any documented API operation no tool covers. |
 
 Resource families: `campaigns`, `leads`, `voice`, `conversations`, `platform` (workspace, numbers, billing reads), `channels` (sending accounts, domains, SMS registration, purchases), `agency` (partner clients and pricing).
 
-### Rules that always apply
+### Habits that usually help
 
-1. **Look before you change.** Start with a `read_*` call. Use ids from results. Never guess an id.
-2. **Say what you will change, then wait for a yes.** Do this immediately before every write. For anything that sends, calls, spends, publishes, deletes or changes a connected account, restate the target and the effect.
-3. **Drafts are safe, launches are not.** Editing a campaign can never start it. Only `launch_campaign` starts one. Saving a voice agent draft does not publish it.
-4. **Ids are public ids** (short URL-safe strings). Pass them exactly as returned. A UUID is never the right input.
-5. **Long work returns a job.** Use `read_platform` with `action: "jobs"` to follow it. Do not report success until the job is done.
-6. **Writes can be replayed.** Where a tool accepts `idempotency_key`, pass a stable key for the action so a retry does nothing twice.
-7. **Never repeat a blocked call.** If a permission, credit balance, compliance rule or missing connection blocks you, report the blocker and the fix. Do not retry in a loop.
-8. **Never show secrets.** Do not print API keys, tokens or full credentials.
-9. **Verify after every write.** Read the record back and report what you saw, not what you intended.
+These are guidance, not commands. Every situation is different, so use judgement and adapt.
+
+1. **Look before you change.** A `read_*` call first shows what already exists. Ids from results are safer than guessed ones.
+2. **Tell the user what you plan to change.** It helps to check in right before a write, especially one that sends, calls, spends, publishes, deletes or changes a connected account, by saying the target and the effect.
+3. **Drafts are low risk.** Editing a campaign does not start it. Only `launch_campaign` starts one. Saving a voice agent draft does not publish it.
+4. **Ids are public ids** (short URL-safe strings). Passing them exactly as returned works best. A UUID is not the right input.
+5. **Long work returns a job.** `read_platform` with `action: "jobs"` follows it. Reporting success is best left until the job is done.
+6. **Writes can be replayed.** Where a tool accepts `idempotency_key`, a stable key for the action means a retry does nothing twice.
+7. **When something blocks you,** such as a permission, a credit balance, a compliance rule or a missing connection, it usually works best to report the blocker and the fix instead of retrying in a loop.
+8. **Keep secrets out of the conversation.** Printing API keys, tokens or full credentials rarely helps anyone.
+9. **Check your work.** Reading the record back and reporting what you saw, rather than what you intended, keeps everyone on the same page.
 
 ### Picking where to start
 
@@ -45,25 +47,25 @@ Resource families: `campaigns`, `leads`, `voice`, `conversations`, `platform` (w
 | A new or empty workspace, "set me up" | sendora-onboarding |
 | "Is my account ready to send?" | sendora-foundation-technical |
 | A full outbound plan | sendora-foundation-business |
-| Leads in the system | sendora-leads-technical, sendora-leads-technical, sendora-leads-technical |
+| Leads in the system | sendora-leads-technical |
 | A voice agent | sendora-voice-technical, sendora-voice-business |
-| A campaign | sendora-campaigns-technical, sendora-campaigns-business, sendora-campaigns-technical |
+| A campaign | sendora-campaigns-technical, sendora-campaigns-business |
 | Replies and the inbox | sendora-inbox-technical |
 | Something is broken | sendora-foundation-technical |
 
 ### Reporting style
 
-Short and concrete. Say what you did, what you saw, and the single next step. Do not narrate tool names to the user unless they ask.
+Short and concrete. Say what you did, what you saw, and the single next step. Most users do not need the tool names unless they ask.
 
 ## 2. Compliance and do-not-contact
 
-Compliance is enforced by the platform, but you must not work against it.
+Compliance is enforced by the platform, and it goes more smoothly when your plans work with it.
 
 ### Do-not-contact list
 
 - Read: `read_leads` `dnc`.
 - Add: `edit_leads` `add_to_dnc` with the email or phone. Do this immediately when a lead says stop, unsubscribe, remove me, or similar, on any channel.
-- Never remove a DNC entry unless the user states the lead gave fresh consent and you can say where.
+- It is better not to remove a DNC entry unless the user states the lead gave fresh consent and you can say where.
 
 ### Before a campaign
 
@@ -73,18 +75,18 @@ Compliance is enforced by the platform, but you must not work against it.
 
 ### During a campaign
 
-- Email carries a one-click unsubscribe. Do not remove it from templates.
+- Email carries a one-click unsubscribe. Prefer not to remove it from templates.
 - Honour the traffic light and pause buttons in the inbox (`edit_conversation` `conversation_step` `pause_outreach`).
-- Quiet hours and active hours are enforced per account. Do not try to bypass them.
+- Quiet hours and active hours are enforced per account. Prefer not to try to bypass them.
 - Holidays: `edit_platform` `settings_step` `add_holiday` stops sending on that date.
 
 ### Replies that mean stop
 
-"Not interested" is not always DNC, but "stop", "unsubscribe", "do not contact" and "take me off" always are. When unsure, pause outreach for that lead and ask the user.
+"Not interested" is not always DNC, but "stop", "unsubscribe", "do not contact" and "take me off" are clear requests to be added. When unsure, pause outreach for that lead and ask the user.
 
-### Never
+### Things that tend to backfire
 
-Contact someone on a channel they did not give, buy or scrape lists to dodge suppression, or disable the AI reply pause (`ai_reply_paused`) just to push volume.
+Contacting someone on a channel they did not give, buying or scraping lists to get around suppression, or turning off the AI reply pause (`ai_reply_paused`) just to push volume.
 
 ## 3. Audit a workspace before you start
 
@@ -100,13 +102,13 @@ Use before any launch, when onboarding a client, or when the user asks "are we r
 6. **SMS readiness.** `read_channels` `sms_readiness`. It says whether the workspace can text yet and what step is next.
 7. **Caller IDs.** `read_channels` `caller_ids`. Flag unverified.
 8. **Voice agents.** `read_voice` `list_agents`, then `check_voice_agent` `validate` on each agent that will be used.
-9. **Integrations.** `read_platform` `integration_health` and `crm_connections`. Flag anything unhealthy and report the last known state, never a guessed one.
+9. **Integrations.** `read_platform` `integration_health` and `crm_connections`. Flag anything unhealthy and report the last known state rather than a guessed one.
 10. **Billing.** `read_platform` `billing` with `include: "billing.wallet,billing.subscription,billing.capacity"`. Flag low wallet balance and capacity limits.
 11. **Waiting work.** `read_conversations` `needs_attention`. Flag approvals and escalations already waiting.
 
 ### Output
 
-A table with three columns: area, state, fix. Group into **Blocking**, **Should fix**, **Fine**. End with the one action to do first. Do not fix anything without being asked.
+A table with three columns: area, state, fix. Group into **Blocking**, **Should fix**, **Fine**. End with the one action to do first. Prefer not to fix anything without being asked.
 
 ## 4. Troubleshooting
 
@@ -125,8 +127,8 @@ A table with three columns: area, state, fix. Group into **Blocking**, **Should 
 | 404 | Wrong id or wrong workspace | Re-read lists for the right id |
 | 409 | In use or conflicting | Read what uses it, resolve, retry once |
 | 422 | Input invalid | Use the hint, fix, retry |
-| Credit or plan block | Not enough balance or capacity | Report. Do not retry |
-| 5xx / vendor down | Transient | Wait, retry later, never loop |
+| Credit or plan block | Not enough balance or capacity | Report. Prefer not to retry |
+| 5xx / vendor down | Transient | Wait and retry later instead of looping |
 
 ### Symptoms
 

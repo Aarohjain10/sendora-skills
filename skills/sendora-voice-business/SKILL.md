@@ -12,9 +12,9 @@ The technical steps are in `sendora-voice-technical`. This guide is about what t
 1. **One call, one goal.** Book a meeting, qualify, confirm an appointment, take a message. Pick one.
 2. **Spoken, not written.** Short sentences. One question at a time. Contractions. No lists, no bullet speech, no long numbers.
 3. **Earn the next ten seconds.** Cold calls are won or lost in the first sentence. Say who you are, why you called, and give an easy way out.
-4. **Honest always.** Say it is an AI if asked. Do not invent facts, prices, customers, or results. Do not pretend to be a named human with a life story.
+4. **Honest always.** Say it is an AI if asked. Prefer not to invent facts, prices, customers, or results. Prefer not to pretend to be a named human with a life story.
 5. **Stop means stop.** Any "stop calling", "remove me" ends the call politely and adds the lead to DNC.
-6. **Facts live in the knowledge base, behaviour lives in the prompt.** Do not paste pricing tables and policies into the prompt. Put them in knowledge so they can change without rewriting behaviour.
+6. **Facts live in the knowledge base, behaviour lives in the prompt.** Prefer not to paste pricing tables and policies into the prompt. Put them in knowledge so they can change without rewriting behaviour.
 
 ## 2. Choose the call type first
 
@@ -29,7 +29,7 @@ The technical steps are in `sendora-voice-technical`. This guide is about what t
 
 ## 3. Prompt template (outbound)
 
-Copy, then replace the angle brackets. Keep it under about 700 words. Variables in double braces must exist on the lead.
+Copy, then replace the angle brackets. Keep it under about 700 words. Variables in double braces should exist on the lead.
 
 ```
 # Role
@@ -59,15 +59,15 @@ One sentence: "I'm calling because <specific reason tied to them, for example {{
 - "We already have <vendor>": "Makes sense, most teams do. We usually come in alongside. Would it be worth seeing how we compare in 15 minutes?"
 - "How did you get my number?": "From a business directory listing for your role. I can remove you if you'd prefer." 
 - "Is this a robot?": "I'm an AI assistant from <company>. I'm happy to connect you with a person."
-- "How much?": Do not quote unless the knowledge base has the price. Say a person will cover it on the call.
+- "How much?": Prefer not to quote unless the knowledge base has the price. Say a person will cover it on the call.
 - Angry or abusive: apologise once, offer to remove them, end the call.
 
-# Rules
-- Never invent facts, customers, numbers or results. If unsure, say a colleague will follow up.
-- Never keep going after "stop", "don't call me", or "remove me": apologise, say you will remove them, end the call, and mark the lead do not contact.
+# Guidelines
+- It is better not to invent facts, customers, numbers or results. If unsure, say a colleague will follow up.
+- It is better not to keep going after "stop", "don't call me", or "remove me": apologise, say you will remove them, end the call, and mark the lead do not contact.
 - One question at a time. Replies of one or two sentences.
-- Do not read URLs or email addresses aloud letter by letter. Offer to send them.
-- Do not argue. Do not push more than twice.
+- Prefer not to read URLs or email addresses aloud letter by letter. Offer to send them.
+- Prefer not to argue. Prefer not to push more than twice.
 
 # Ending
 Confirm what happens next in one sentence, thank them, end the call.
@@ -90,13 +90,13 @@ Find out why they are calling, help if you can from the knowledge base, otherwis
 2. If it is answerable from knowledge, answer in two sentences, then ask if that helps.
 3. If they want to book, collect name, best number, and a time, use the meeting tool.
 4. If it is urgent or you cannot help, say a person will call back and when. Capture name and number first.
-5. Always confirm the callback number by reading it back in groups.
+5. It helps to confirm the callback number by reading it back in groups.
 
 # After hours
 Say the office is closed, offer to take a message or book a callback.
 
-# Rules
-Never give pricing, legal or medical advice unless the knowledge base says so. Never promise a time you do not have in the tool.
+# Guidelines
+It is better not to give pricing, legal or medical advice unless the knowledge base says so. It is better not to promise a time you do not have in the tool.
 ```
 
 ## 5. Opening lines that work
@@ -152,4 +152,4 @@ Benchmarks to watch: connect rate, calls over 30 seconds, meetings per 100 conne
 
 ## 11. Compliance lines
 
-Identify the company, honour stop requests at once, respect quiet hours and local rules, never call numbers on the DNC list, and tell callers when a call is recorded where required. See `sendora-foundation-technical`.
+Identify the company, honour stop requests at once, respect quiet hours and local rules, avoid calling numbers on the DNC list, and tell callers when a call is recorded where required. See `sendora-foundation-technical`.

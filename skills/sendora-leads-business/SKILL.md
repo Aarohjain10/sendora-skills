@@ -24,7 +24,7 @@ If the user cannot answer 4, say so: no urgent trigger means cold, fit-based out
 
 **Fit-based (cold).** Everyone who matches the profile. Easy to scale, lower response, needs strong copy and volume. Reply rates are typically low single digits.
 
-**Intent-led (warm).** Only people showing a sign they care right now. Smaller lists, much higher response, easier conversations. Always prefer it when a good signal exists, then add fit-based for volume.
+**Intent-led (warm).** Only people showing a sign they care right now. Smaller lists, much higher response, easier conversations. It helps to prefer it when a good signal exists, then add fit-based for volume.
 
 ### The signal ladder (strongest to weakest)
 
@@ -47,7 +47,7 @@ How to run an intent-led play: pick the right people or content to watch (a crea
 
 ## 3. Recipes (starting filters)
 
-Treat these as starting points, then preview and adjust. Values must be exact (see `reference/filter-values.md` in the technical guide).
+Treat these as starting points, then preview and adjust. Values need to be exact (see `reference/filter-values.md` in the technical guide).
 
 **B2B SaaS selling to sales leaders**
 - people: `titles` ["Head of Sales", "VP Sales", "Chief Revenue Officer"], `levels` ["VP", "C-Team"], `functions` ["Sales & Business Development"], `countries` ["US", "GB"]
@@ -81,9 +81,9 @@ Treat these as starting points, then preview and adjust. Values must be exact (s
 
 ## 4. Sizing the list
 
-Work backwards: target meetings per month, divided by meeting rate (cold email about 0.5 to 1 per 100 contacts, warm and intent-led 3 to 10 per 100), gives contacts needed. Add 30 percent for bounces and disqualifications. Do not buy more than one cycle of leads at a time.
+Work backwards: target meetings per month, divided by meeting rate (cold email about 0.5 to 1 per 100 contacts, warm and intent-led 3 to 10 per 100), gives contacts needed. Add 30 percent for bounces and disqualifications. Prefer not to buy more than one cycle of leads at a time.
 
-Start with 50 to 100 leads, send, learn, then widen. Do not build a 10,000 list before the first 100 get answers.
+Start with 50 to 100 leads, send, learn, then widen. Prefer not to build a 10,000 list before the first 100 get answers.
 
 ## 5. Quality checks before a campaign
 
@@ -95,7 +95,7 @@ Run these on a sample of 20 from the preview, in the preview, before committing:
 - **Duplicates:** a person at two companies, or already in another list (`already_in_other_lists_count` after commit).
 - **Contactability:** after commit, verify emails. Cut invalid ones. For calling, confirm a phone is present.
 
-If quality is below 85 percent fit, do not scale. Fix the filters first.
+If quality is below 85 percent fit, it is usually better to fix the filters before scaling.
 
 ## 6. Personalisation data (this is what makes messages good)
 

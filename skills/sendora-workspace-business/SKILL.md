@@ -20,12 +20,12 @@ The workspace has one owner and three roles you can assign (read the live list w
 
 Who gets what: the founder or head of growth is owner; an operations lead is admin; anyone who runs campaigns day to day is manager; a stakeholder who only needs numbers is viewer. Scope contractors to their own campaigns or lead lists with `set_team_access`.
 
-Rules: keep two owners if you can, no more than two or three admins, give access for a purpose and review it quarterly. Never make someone owner without an explicit instruction from an existing owner.
+Rules: keep two owners if you can, no more than two or three admins, give access for a purpose and review it quarterly. It is better not to make someone owner without an explicit instruction from an existing owner.
 
 ## 2. People lifecycle
 
 - **Join:** invite with the lowest role that works, scope contractors, and tell them which campaigns and lists are theirs.
-- **Move:** change role and scope the same day. Do not stack old access.
+- **Move:** change role and scope the same day. Prefer not to stack old access.
 - **Leave:** suspend at once, reassign their campaigns, agents and lists, then remove. Check what they owned first.
 
 ## 3. Choosing integrations
@@ -33,7 +33,7 @@ Rules: keep two owners if you can, no more than two or three admins, give access
 - Name the **system of record** for each thing: leads (CRM), deals (CRM), meetings (calendar), outreach activity (Sendora). Data flows toward the system of record, not both ways for the same field.
 - Connect one thing at a time, run the connection test, then a dry-run import with a small limit, then read the mapping conflicts before the real import.
 - Keep field mapping simple: one source field per target field.
-- Treat an unhealthy integration as an incident: read the last known state, tell the owner, do not trust numbers that depend on it.
+- Treat an unhealthy integration as an incident: read the last known state, tell the owner, be cautious with numbers that depend on it.
 
 ## 4. Webhooks that earn their keep
 
@@ -45,7 +45,7 @@ Subscribe only to events someone acts on. Typical sets:
 | Keep a CRM in step | lead created, stage changed |
 | Ops alerting | send failures, account problems |
 
-Send a test event first. Rotate the secret if it was ever shared in chat or a ticket. The receiving system must verify the signature and deduplicate by event id.
+Send a test event first. Rotate the secret if it was ever shared in chat or a ticket. The receiving system should verify the signature and deduplicate by event id.
 
 ## 5. Controlling spend
 

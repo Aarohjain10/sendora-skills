@@ -9,7 +9,7 @@ The tools are in `sendora-analytics-technical`. This guide is how to read the nu
 
 ## 1. The one question per report
 
-Every report must end with an action: keep, fix, scale or stop. If you cannot say which, the report is not finished.
+Every report works best when it ends with an action: keep, fix, scale or stop. If you cannot say which, the report is not finished.
 
 ## 2. Metrics that matter, in order
 
@@ -23,7 +23,7 @@ Every report must end with an action: keep, fix, scale or stop. If you cannot sa
 | Meetings per 100 connects (calls) | Calls that turn into a booking | 2 to 8 |
 | Cost per meeting | Credits and subscription per booking | falling over time |
 
-These are rules of thumb. Compare a campaign with your own past results first, and with these second. Opens are unreliable (machines open mail), so never decide on opens alone.
+These are rules of thumb. Compare a campaign with your own past results first, and with these second. Opens are unreliable (machines open mail), so it is better not to decide on opens alone.
 
 ## 3. Weekly review (30 minutes)
 
@@ -56,7 +56,7 @@ These are rules of thumb. Compare a campaign with your own past results first, a
 - Run at least one full week so weekday effects average out.
 - A winner beats control by about 30 percent relative and by more than a handful of replies. Otherwise keep the control.
 - After a win: make the winner the baseline, then test the next single variable.
-- Never end a test early because one variant looks ahead on day two.
+- It is better not to end a test early because one variant looks ahead on day two.
 
 ## 6. Keep, fix, scale, stop
 
@@ -75,4 +75,4 @@ These are rules of thumb. Compare a campaign with your own past results first, a
 
 ## 8. Honest reporting
 
-State the window. Report zero as zero. Say when a source was unavailable and show the last known value with its time. Do not compare periods of different length without saying so, and do not claim causes you have not tested.
+State the window. Report zero as zero. Say when a source was unavailable and show the last known value with its time. Prefer not to compare periods of different length without saying so, and avoid claiming causes you have not tested.

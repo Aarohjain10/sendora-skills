@@ -21,7 +21,7 @@ Include credits that fit the package. Charge setup for infrastructure and onboar
 
 ## 2. Pricing logic
 
-Start from your cost per delivered outcome, add the markup (`save_pricing`, in basis points), then check retail rates per credit before you publish. Do not undercut yourself: price on value (a meeting is worth hundreds). Leave room for usage past the included credits. Review pricing quarterly.
+Start from your cost per delivered outcome, add the markup (`save_pricing`, in basis points), then check retail rates per credit before you publish. Prefer not to undercut yourself: price on value (a meeting is worth hundreds). Leave room for usage past the included credits. Review pricing quarterly.
 
 ## 3. Client onboarding timeline
 
@@ -43,7 +43,7 @@ Weekly: sends, replies, positive replies, meetings, issues, next week's change. 
 
 ## 5. Protecting reputation across clients
 
-Separate domains and mailboxes per client. Never share a sending account across clients. Apply the same pause thresholds to every client. If one client ruins a domain, it must not touch others. Keep a shared standard checklist (`sendora-foundation-technical`).
+Separate domains and mailboxes per client. It is better not to share a sending account across clients. Apply the same pause thresholds to every client. If one client ruins a domain, it should not touch the others. Keep a shared standard checklist (`sendora-foundation-technical`).
 
 ## 6. Margin and capacity
 
@@ -55,4 +55,4 @@ Suspend (with a clear message) when payment fails or when a client violates comp
 
 ## 8. Client communication
 
-Explain what is happening in plain words. Share bad news early with a plan. Give them a short dashboard of the numbers that matter. Never expose supplier or infrastructure names; use "Sendora".
+Explain what is happening in plain words. Share bad news early with a plan. Give them a short dashboard of the numbers that matter. It is better not to expose supplier or infrastructure names; use "Sendora".

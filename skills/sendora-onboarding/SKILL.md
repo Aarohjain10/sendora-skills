@@ -1,64 +1,49 @@
 ---
 name: sendora-onboarding
-description: "Set up a new Sendora workspace for the customer, as drafts only. Use when the workspace is new or empty, or the user says \"set me up\", \"get me started\" or \"onboard me\". Reads first, asks three questions, proposes plays, builds a knowledge base, voice agent, lead list and campaign draft, and lists what only the user can do next."
+description: "Get a new or empty Sendora workspace going for a customer. Learn the business first, then use the other Sendora skills to build what fits, as drafts for the user to review. Useful when the user says set me up, get me started or onboard me."
 ---
 
-# Sendora: onboard a new workspace
+# Sendora: onboard a workspace
 
-Read `sendora-foundation-technical` first. Its rules apply here. This skill only ever creates drafts. It never launches, sends, calls, buys or spends.
+This is guidance for getting someone started. Every business is different, so treat the steps as a sensible order and change them to fit the person in front of you. Other Sendora skills do the detailed work, and this one points to them when they are needed. The habits in `sendora-foundation-technical` are worth a glance first.
 
-## 1. Look before you ask
+## 1. Learn the business
 
-Read what already exists so you never duplicate it.
+The better you understand the company, the better everything built for it. Spend real effort here before building.
 
-1. `read_platform` `settings` for the company profile and mailing address.
-2. `read_voice` `list_agents` and `read_voice` `list_knowledge_bases`.
-3. The lead lists and campaigns, using the list calls in `sendora-leads-technical` and `sendora-campaigns-technical`.
+- Read what the workspace already holds: `read_platform` `settings` for the company profile, and the existing agents, knowledge bases, lead lists and campaigns through the read calls in `sendora-voice-technical`, `sendora-leads-technical` and `sendora-campaigns-technical`. If things already exist, it usually makes sense to build on them.
+- Research the company with your own tools if you have them: their website and its main pages, what they sell, who they sell to, pricing or plans, case studies, reviews, recent news, competitors, and the language and tone they use. If you cannot browse, ask the user for the website and a short description.
+- Notice the market too: where the customers are, how they buy, and what a busy buyer in that world cares about.
 
-If agents, lists or campaigns already exist, say what you found and ask whether to build on it. Do not start over.
+Then say back what you understood in a few sentences, and ask only for what you could not find, such as the real goal, the buyer you want most, or the channels they are comfortable with. One short message is usually enough.
 
-## 2. Ask three questions
+## 2. Decide what to build
 
-Ask only what you cannot read from the workspace. Keep it to three, in one message.
+Work out what would help this business most, then offer two or three options in plain words: who it reaches, how, and why it fits. A goal might be new meetings, qualifying people who get in touch, winning back older contacts, or something else entirely. Let the user choose or reshape the idea before you build.
 
-1. What do you sell, and to whom? Ask for the website too. If there is no website, one line about the business is enough.
-2. What is the goal: book meetings with new people, answer and qualify people who contact you, or win back older contacts?
-3. Which channels do you want to use? Offer email, calls, WhatsApp and text. Tell them text needs a business registration that cannot be done during setup, so plan without it and add it later.
+Some pointers for choosing:
 
-Where the people are decides the chat channel. Europe: WhatsApp, not text. The United States: text, once registered. Elsewhere: WhatsApp.
+- `sendora-foundation-business` has ideas on sequencing a go to market effort.
+- `sendora-leads-business` helps define who to reach, and `sendora-campaigns-business` helps shape the journey.
+- Channels work if their prerequisites exist. `sendora-channels-business` explains what each needs, which matters for email and texting in particular.
 
-## 3. Propose two or three plays
+## 3. Build it
 
-One line each: who it reaches, the channels in order, and why it fits this business. Name only facts you were given, never invent customers or numbers. Reasonable defaults:
+Build in whatever order the plan needs, and tell the user what you are doing as you go. Typical pieces, each with the skill that covers it:
 
-- New people, email then a call, spread over about a week.
-- Local businesses (restaurants, clinics, contractors): find them on Google Maps and plan around calls, with no email steps.
-- Older leads or people already in the pipeline: suggest voice calls, and say so.
-- People who contact them: a voice agent answers, a chat agent follows up by message.
+- Facts about the business for agents to draw on: a knowledge base (`sendora-voice-technical`).
+- A voice agent if calls are part of the plan: how to write the prompt is in `sendora-voice-business`, the setup in `sendora-voice-technical`. A chat agent for replies is in `sendora-inbox-technical`.
+- The people to reach: `sendora-leads-technical` covers search, preview and import. Previewing before committing keeps spend under the user's control.
+- The campaign: `sendora-campaigns-technical` and `sendora-campaigns-business`.
 
-Wait for the user to pick one. Do not build before they do.
+Drafts leave the user in charge. Publishing, launching, sending, calling, buying and spending can wait for a clear go ahead from them.
 
-## 4. Build the picked play, as drafts
+## 4. Hand over
 
-Say what you are about to do before each step, then do it, then read it back.
+Give the user a short picture of what now exists and what only they can do. Depending on the plan, that might be connecting a mailbox, getting a phone number, connecting a calendar, adding credits, or reviewing the drafts. `sendora-foundation-technical` has a read only audit that shows what is ready and what is blocking.
 
-1. **Knowledge base.** `edit_voice` `create_knowledge_base`, then `add_kb_url` with the website (or `add_kb_text` with the one line). Keep facts here, not in prompts (`sendora-voice-technical`).
-2. **Voice agent, only if the play has a call.** Write the prompt with `sendora-voice-business`. Save a draft with `edit_voice` `save_draft`. Do not publish and do not assign a number. `assign_kb` to attach the knowledge base.
-3. **Lead list.** `edit_leads` `create_list`, then find people with `find_prospects`. Preview first (`preview_search`, or `preview_google_maps` for local businesses), show the user what you found, and commit only the people they approve. Credits are spent at commit, so say so first (`sendora-leads-technical`).
-4. **Campaign draft.** Build the steps with `sendora-campaigns-technical` and write the messages with `sendora-campaigns-business`. Validate, save, run preflight. Do not enroll leads and do not launch.
+## Keep in mind
 
-## 5. Finish with what only the user can do
-
-List the next steps in order, each with the reason:
-
-- Connect a mailbox and set a mailing address (email needs both).
-- Get a phone number (the voice agent needs one to call). Quote the price first, buy nothing without a yes.
-- Connect a calendar so booked meetings really book.
-- Add credits if the lead list needs contact lookups.
-- Review the drafts, then ask you to launch when ready (`sendora-campaigns-technical`).
-
-End by running the read only audit in `sendora-foundation-technical` and report blockers in the Blocking, Should fix, Fine format.
-
-## Never
-
-Launch, send, call, publish, buy or spend. Enroll leads. Skip the preview before a lead commit. Say something was created before you have read it back. Ask for or repeat passwords, keys or codes.
+- Describe results in the customer's terms. The supplier and infrastructure names behind Sendora are not useful to them.
+- Stay with facts you learned about the business. Invented customers, numbers or claims tend to cost trust later.
+- If the user wants something different from this order, follow the user.

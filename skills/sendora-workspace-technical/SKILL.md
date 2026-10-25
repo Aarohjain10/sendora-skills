@@ -9,7 +9,7 @@ description: "Technical guide to workspace administration via the MCP: integrati
 
 ### Health
 
-`read_platform` `integration_health` shows every connected account with counts. One account with its incidents and recent checks by `id`. If a source is down, report the last known state with its time. Do not show a guessed healthy or zero.
+`read_platform` `integration_health` shows every connected account with counts. One account with its incidents and recent checks by `id`. If a source is down, report the last known state with its time. Prefer not to show a guessed healthy or zero.
 
 `edit_platform` `check_integration` queues a fresh check (admins and owners).
 
@@ -29,9 +29,9 @@ Connecting a CRM or calendar needs the owner to sign in. Ask them to do that in 
 3. Check `mapping_conflicts`. Fix mapping.
 4. Import for real. Verify a few leads.
 
-### Rules
+### Guidelines
 
-Know which direction data flows. Do not map one field two ways. Keep a CRM as the system of record for deals if the customer already uses one.
+Know which direction data flows. Prefer not to map one field two ways. Keep a CRM as the system of record for deals if the customer already uses one.
 
 ## 2. Webhooks
 
@@ -45,7 +45,7 @@ Know which direction data flows. Do not map one field two ways. Keep a CRM as th
 - `update_webhook`: change `url`, `event_types`, `is_active`, `rotate_secret`, or `send_test`.
 - `delete_resource` `webhook_endpoint`.
 
-### Consumer rules (tell the customer's developer)
+### Consumer guidelines (tell the customer's developer)
 
 1. Read the raw body.
 2. Verify the signature with the endpoint secret before parsing.

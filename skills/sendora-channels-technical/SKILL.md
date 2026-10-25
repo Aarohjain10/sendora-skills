@@ -34,7 +34,7 @@ Strength score low, bounces rising, a lifecycle reason other than active, a reco
 
 ### Disconnect
 
-`delete_resource` `account` disconnects SMTP, WhatsApp or LinkedIn accounts or cancels a managed mailbox. Add `confirm_unassign` only if it is in use and the user agrees. LinkedIn accounts are sensitive: never push automation limits higher than the defaults.
+`delete_resource` `account` disconnects SMTP, WhatsApp or LinkedIn accounts or cancels a managed mailbox. Add `confirm_unassign` only if it is in use and the user agrees. LinkedIn accounts are sensitive: it is better not to push automation limits higher than the defaults.
 
 ### Add new accounts
 
@@ -83,9 +83,9 @@ Buying managed mailboxes is a purchase (sendora-channels-technical). Connecting 
 - `weighted`: send more from stronger accounts.
 - `sticky_by_lead`: the same lead always hears from the same sender, best for follow ups.
 
-### Rules
+### Guidelines
 
-Keep pools single channel. Remove weak or flagged accounts from the pool, do not delete them. A pool cannot be deleted while a live campaign uses it (409).
+Keep pools single channel. Remove weak or flagged accounts from the pool rather than deleting them. A pool cannot be deleted while a live campaign uses it (409).
 
 ## 4. Deliverability tests
 
@@ -102,7 +102,7 @@ US texting needs a registered brand and campaign. Carrier review takes days.
 
 ### Read
 
-`read_channels` `sms_readiness`: can this workspace text yet, what is next, the allowed form options, and an optional fee quote with `quote`. Always read the option lists from it: values are lowercase and exact.
+`read_channels` `sms_readiness`: can this workspace text yet, what is next, the allowed form options, and an optional fee quote with `quote`. It helps to read the option lists from it: values are lowercase and exact.
 
 `sms_registrations` lists brands and campaigns, or reads one by `type` and `id` with `include` of `events, numbers, eligible_numbers`.
 
@@ -136,9 +136,9 @@ Anything that costs money goes quote, confirm, buy, verify.
 5. Follow it: `read_platform` `purchases` with `operation_id` until done.
 6. Read the new item back.
 
-### Rules
+### Guidelines
 
 - A quote expires. If the buy says it did, quote again and re-confirm.
-- Never buy twice because of a timeout: read `purchases` first.
-- Never use a card or a payment detail. Payments run on the wallet or the saved method.
+- It is better not to buy twice because of a timeout: read `purchases` first.
+- It is better not to use a card or a payment detail. Payments run on the wallet or the saved method.
 - If capacity is full, say so and ask whether to upgrade (`billing.capacity`).

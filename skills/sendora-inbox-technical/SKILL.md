@@ -33,7 +33,7 @@ Strategy for answering replies is in `sendora-inbox-business`.
 - `send_outreach` `message` sends a text channel message.
 - `send_outreach` `email` sends an email.
 
-Both reach a real person. Show the user the exact text, recipient and channel, and wait for a yes. Do not send from a campaign's sending account in a way that breaks its pacing without saying so.
+Both reach a real person. Show the user the exact text, recipient and channel, and wait for a yes. Prefer not to send from a campaign's sending account in a way that breaks its pacing without saying so.
 
 ## 2. Chat agents
 
@@ -86,7 +86,7 @@ Campaign steps and agents raise items for a human. They block until decided.
 
 `edit_conversation`:
 
-- `decide_approval` with `decision: approved` or `rejected`. Show the user what is being approved (the draft message or action) before deciding. Never approve on the user's behalf without a yes unless they set a standing rule.
+- `decide_approval` with `decision: approved` or `rejected`. Show the user what is being approved (the draft message or action) before deciding. It is better not to approve on the user's behalf without a yes unless they set a standing rule.
 - `update_escalation` with a `status` (acknowledge, resolve, reopen). Resolving needs `resolution_type`: `retry` (try again), `skip` (leave it out) or `manual` (a person handled it).
 - `update_task` with `status`: open, in_progress, completed, cancelled.
 

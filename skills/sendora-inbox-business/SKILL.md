@@ -57,9 +57,9 @@ Interested, question, objection, not now, wrong person, out of office, unsubscri
 **Request for information**
 > Sure. Here's a short summary: <two lines>. Would it help to see it on a quick call, or should I send examples first?
 
-## 5. Writing rules
+## 5. Writing guidelines
 
-Match their length and formality. One ask per message. No walls of text. Answer the question they asked first. Never promise what the knowledge base does not support. Keep the thread. Sign with a real sender name.
+Match their length and formality. One ask per message. No walls of text. Answer the question they asked first. It is better not to promise what the knowledge base does not support. Keep the thread. Sign with a real sender name.
 
 ## 6. Booking meetings
 
@@ -67,9 +67,9 @@ Offer two specific times in their time zone. Confirm by restating the time, the 
 
 ## 7. Chat agents (SMS and WhatsApp)
 
-Best for fast, short exchanges: confirming interest, answering simple questions, booking. Keep replies under two short sentences on SMS. Always stop on "stop". Hand to a person for pricing exceptions, complaints, legal, and anything the agent is unsure about. Review the first 50 conversations closely; use `replay` against new instructions before changing them live.
+Best for fast, short exchanges: confirming interest, answering simple questions, booking. Keep replies under two short sentences on SMS. It helps to stop on "stop". Hand to a person for pricing exceptions, complaints, legal, and anything the agent is unsure about. Review the first 50 conversations closely; use `replay` against new instructions before changing them live.
 
-## 8. Escalation rules
+## 8. Escalation guidelines
 
 Escalate: a buying signal with a large account, an angry reply, a legal or compliance question, a technical question the knowledge base cannot answer, anything involving money or contracts.
 

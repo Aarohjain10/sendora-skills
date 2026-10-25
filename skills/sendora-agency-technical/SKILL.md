@@ -45,9 +45,9 @@ Suspending stops the client using the app. Confirm the client name, say that run
 - `create_package_version` publishes a new version (`package_id` plus fields). Existing clients keep their version until moved.
 - `save_pricing` saves a draft markup (`default_markup_bps`). `publish_pricing` makes it live. Package creation needs published pricing.
 
-### Rules
+### Guidelines
 
-Never edit a live version in place. Always make a new version. Explain to the user how many clients a change touches.
+It is better not to edit a live version in place. It helps to make a new version. Explain to the user how many clients a change touches.
 
 ## 3. Branding and onboarding
 

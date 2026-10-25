@@ -10,7 +10,7 @@ Tool usage is in `sendora-campaigns-technical`. This guide is what to build and 
 ## 1. Principles
 
 1. **Relevance beats volume.** A sequence to 200 well chosen people beats 5,000 poorly chosen. Fix the list before the copy.
-2. **One idea per touch.** Each message adds one new reason to reply. Never repeat "just following up".
+2. **One idea per touch.** Each message adds one new reason to reply. It is better not to repeat "just following up".
 3. **Multichannel beats single channel.** People respond on different channels. A call after an email open, a LinkedIn touch between emails, lifts replies, as long as each touch is respectful.
 4. **Leave on reply.** The moment someone replies, they leave the sequence and a person or a chat agent takes over.
 5. **Small first, then scale.** First run is a test: 30 to 100 leads.
@@ -62,7 +62,7 @@ Branch: if a call connects and the lead says "send me details", send a one-line 
 Keep to the account's safe daily limits.
 
 ### 3D. Account based (30 days, 3 to 5 contacts per account)
-Stagger people across a company by two to three days. Different angle per role (economic buyer: outcome; user: how it helps daily). Do not contact more than three people in the same company in the same week. Add a human approval step for every first touch.
+Stagger people across a company by two to three days. Different angle per role (economic buyer: outcome; user: how it helps daily). Prefer not to contact more than three people in the same company in the same week. Add a human approval step for every first touch.
 
 ### 3E. Warm intent (10 days)
 - Day 0: Reference the signal in the first line ("saw your comment on ..."). One question.
@@ -108,12 +108,12 @@ Avoid: more than three levels of nesting, branches nobody reads, and AI decision
 You almost never need more than **one test at a time per step**. Small lists cannot support many tests.
 
 Rules of thumb:
-- Test **one variable**: subject line, opening line, offer, call to action, or send time. Never two at once.
+- Test **one variable**: subject line, opening line, offer, call to action, or send time. It is better not to two at once.
 - Minimum sample: about **150 to 200 sends per variant** before drawing a conclusion for reply rate; **300 or more** for small differences. With less, you are reading noise.
 - **Two variants** (control plus one challenger) is enough. Three only on lists above 1,000.
 - Run each test for at least **one full week** to cover weekday effects.
 - Judge on **positive replies**, not opens (opens are unreliable). For calls, judge on meetings per connect.
-- Winner must beat control by a clear margin (about 30 percent relative) and by at least a handful of replies. Otherwise keep the control.
+- A winner should beat control by a clear margin (about 30 percent relative) and by at least a handful of replies. Otherwise keep the control.
 - After a win, promote the winner to control and test the next variable.
 
 Test order that pays most: **audience first**, then **offer**, then **subject line and opening**, then **length**, then **call to action**, then **timing**.

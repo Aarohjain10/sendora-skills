@@ -11,7 +11,7 @@ How the tools work. For how to choose *good* leads for a business, read `sendora
 
 - A **lead** is one person or business. A **lead list** is a container; campaigns enrol from lists. Segments, tags and pipeline stages are slices on top.
 - Every list-scoped call needs the list's public `list_id`. Create the list first.
-- Ids are the public ids returned by tools. Never use or show a UUID.
+- Ids are the public ids returned by tools. It is better not to use or show a UUID.
 
 ## 2. Ways to get leads in
 
@@ -47,7 +47,7 @@ Config fields per `source_type`:
 | `prospect_search` | A B2B people search as a run | `filters` (section 6), `limit` up to 200 |
 | `linkedin_connections` | Your connected account's connections | **Disabled for now** |
 
-Common optional fields on most sources: `ai_qualification` (`enabled`, `icp_prompt` up to 2000 chars, `only_qualified`) keeps only people who match your ideal customer description, and `auto_enrich` (default true) looks up contact data. Always turn `ai_qualification` on with a clear `icp_prompt` for social sources, because raw engagers include many people who are not buyers.
+Common optional fields on most sources: `ai_qualification` (`enabled`, `icp_prompt` up to 2000 chars, `only_qualified`) keeps only people who match your ideal customer description, and `auto_enrich` (default true) looks up contact data. It helps to turn `ai_qualification` on with a clear `icp_prompt` for social sources, because raw engagers include many people who are not buyers.
 
 Notes: if a call is refused, report the exact message instead of retrying. Social data is public data; it is not consent to contact, so run DNC checks as usual.
 
@@ -107,7 +107,7 @@ The result reports: `new_leads_count`, `updated_leads_count`, `already_in_other_
 
 **Allowance and costs.** Each plan includes a monthly allowance of people whose contact details are found (Launch 6,000, Growth 20,000). Searching and previewing does not use it. Past the allowance, and on pay as you go, contact lookups use credits as above. There are daily fair use caps per workspace. Tell the user before a commit that will use credits.
 
-**Errors:** 402 empty balance (report, do not retry), 403 role cannot search, 503 search switched off, 422 a filter value is not allowed (the message names it).
+**Errors:** 402 empty balance (report it rather than retrying), 403 role cannot search, 503 search switched off, 422 a filter value is not allowed (the message names it).
 
 ### Company employees
 

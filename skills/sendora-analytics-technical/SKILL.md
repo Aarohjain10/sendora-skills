@@ -52,7 +52,7 @@ How variants are edited is in `sendora-campaigns-technical` (A/B testing is per 
 
 ## Habits
 
-- Use the smallest window that answers the question. Always state the window in the answer.
+- Use the smallest window that answers the question. It helps to state the window in the answer.
 - Page long lists with `limit` and `offset` instead of pulling everything.
 - Zero is a real answer. A report that returns empty usually means nothing happened in the window, not an error.
-- If a call fails with 503 or a timeout, say the report is unavailable and show the last number you have with its time. Never fill in a guess.
+- If a call fails with 503 or a timeout, say the report is unavailable and show the last number you have with its time. It is better not to fill in a guess.
