@@ -6,21 +6,37 @@ Each area has two skills. The technical one says which tools and fields to use, 
 
 ## Install
 
-Works with Claude Code, Codex, Cursor, Windsurf and most other coding agents. Use your agent's id: `claude-code`, `codex`, `cursor` or `windsurf` (`npx -y add-mcp list-agents` shows the rest).
+Each tool has its own native steps. Signing in always opens a browser page where you choose your workspace and approve access. The same prompts are on the MCP page inside Sendora (Settings, Integrations, MCP), ready to paste into your agent.
 
-1. Connect the Sendora MCP server, then sign in when your agent asks (a browser page opens to approve access to your workspace):
-
-```
-npx -y add-mcp https://api.sendora.ai/api/v1/mcp -n sendora -g -a <id> -y
-```
-
-2. Install the skills:
+**Claude Code** (skills and connection as one plugin):
 
 ```
-npx -y skills add Aarohjain10/sendora-skills -g -y -a <id>
+claude plugin marketplace add Aarohjain10/sendora-skills
+claude plugin install sendora@sendora-skills
+claude mcp login plugin:sendora:sendora
 ```
 
-Reload your agent, then start with `sendora-onboarding`. Use `--list` to preview the skills, or `--skill sendora-onboarding` to install one.
+**Codex:**
+
+```
+codex mcp add sendora --url https://api.sendora.ai/api/v1/mcp
+codex mcp login sendora
+```
+
+**Cursor:** add `"sendora": { "url": "https://api.sendora.ai/api/v1/mcp" }` under `mcpServers` in `~/.cursor/mcp.json`, then sign in from Cursor's MCP settings.
+
+**Windsurf:** add `"sendora": { "serverUrl": "https://api.sendora.ai/api/v1/mcp" }` under `mcpServers` in your Windsurf MCP config, then sign in from the MCPs section of the Cascade panel.
+
+**Skills for Codex, Cursor and Windsurf** (copy the folders, no package needed):
+
+```
+git clone --depth 1 https://github.com/Aarohjain10/sendora-skills.git /tmp/sendora-skills
+mkdir -p ~/.agents/skills && cp -R /tmp/sendora-skills/skills/. ~/.agents/skills/
+```
+
+Windsurf reads `~/.codeium/windsurf/skills/` too; use that folder if `~/.agents/skills` does not show them. Other agents: `npx -y skills add Aarohjain10/sendora-skills -g -y -a <agent id>`.
+
+Restart your agent, then start with `sendora-onboarding`.
 
 ## Skills
 
