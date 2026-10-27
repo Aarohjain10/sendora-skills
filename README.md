@@ -6,13 +6,21 @@ Each area has two skills. The technical one says which tools and fields to use, 
 
 ## Install
 
-Connect the Sendora MCP server first (`https://api.sendora.ai/api/v1/mcp`, sign in with OAuth), then install the skills with the skills tool:
+Works with Claude Code, Codex, Cursor, Windsurf and most other coding agents. Use your agent's id: `claude-code`, `codex`, `cursor` or `windsurf` (`npx -y add-mcp list-agents` shows the rest).
+
+1. Connect the Sendora MCP server, then sign in when your agent asks (a browser page opens to approve access to your workspace):
 
 ```
-npx skills add Aarohjain10/sendora-skills -a claude-code -g -y
+npx -y add-mcp https://api.sendora.ai/api/v1/mcp -n sendora -g -a <id> -y
 ```
 
-Use `-a codex` or `-a cursor` for those tools. The repository is private for now, so set `GITHUB_TOKEN` or `GH_TOKEN` first. Use `--list` to preview what is in it, or `--skill sendora-onboarding` to install one skill.
+2. Install the skills:
+
+```
+npx -y skills add Aarohjain10/sendora-skills -g -y -a <id>
+```
+
+Reload your agent, then start with `sendora-onboarding`. Use `--list` to preview the skills, or `--skill sendora-onboarding` to install one.
 
 ## Skills
 
