@@ -1,6 +1,6 @@
 ---
 name: sendora-inbox-business
-description: "Business guide to handling replies and conversations: triage order, response templates for every reply type, meeting booking, objection handling in writing, when to hand to a human, chat agent behaviour on SMS and WhatsApp, response time targets, and pipeline hygiene."
+description: "Business guide to handling replies and conversations: triage order, response templates for every reply type, meeting booking, objection handling in writing, when to hand to a human, response time targets, and pipeline hygiene."
 ---
 
 # Replies and conversations playbook
@@ -67,7 +67,7 @@ Offer two specific times in their time zone. Confirm by restating the time, the 
 
 ## 7. Chat agents (SMS and WhatsApp)
 
-Best for fast, short exchanges: confirming interest, answering simple questions, booking. Keep replies under two short sentences on SMS. It helps to stop on "stop". Hand to a person for pricing exceptions, complaints, legal, and anything the agent is unsure about. Review the first 50 conversations closely; use `replay` against new instructions before changing them live.
+What a chat agent is for, how to write its instructions, follow-up cadence and rollout are in `sendora-chat-agents-business`. In short: keep SMS replies to two short sentences, stop on "stop", hand pricing exceptions, complaints and legal questions to a person, and read the first 50 conversations closely.
 
 ## 8. Escalation guidelines
 

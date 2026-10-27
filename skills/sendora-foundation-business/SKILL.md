@@ -21,7 +21,7 @@ Create a lead list named for the motion. Fill it by prospect search, Google Maps
 
 ### 3. Agents (skills: sendora-voice-technical, sendora-inbox-technical)
 
-Create the voice agent if calls are in the plan, give it a knowledge base about the offer, and test it with a test call before any real lead is touched. Create a chat agent if replies on SMS or WhatsApp should be handled by AI.
+Create the voice agent if calls are in the plan, give it a knowledge base about the offer, and test it with a test call before any real lead is touched. Create a chat agent if replies on SMS or WhatsApp should be handled by AI (`sendora-chat-agents-technical`).
 
 ### 4. Campaign (skills: sendora-campaigns-technical, sendora-campaigns-business)
 
@@ -87,7 +87,7 @@ Speed to lead wins. Target: contact within five minutes.
 
 1. **Capture.** Leads arrive by form, widget or inbound call (sendora-voice-technical, sendora-workspace-technical for forms).
 2. **Instant touch.** A campaign with trigger on new lead, then `send_sms` or email within a minute, and a `voice_call` after five minutes if no reply.
-3. **Chat agent** (sendora-inbox-technical) handles the reply: confirm need, ask two qualifiers, offer meeting times.
+3. **Chat agent** (sendora-chat-agents-technical) handles the reply: confirm need, ask two qualifiers, offer meeting times.
 4. **Voice agent** calls if they answer the phone call.
 5. **Booking.** `propose_meeting_times` tool, record with `create_meeting`, move the pipeline stage.
 6. **Escalate** to a person for large or unusual requests.

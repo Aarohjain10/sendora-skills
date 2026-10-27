@@ -1,9 +1,9 @@
 ---
 name: sendora-inbox-technical
-description: "Technical guide to replies and conversations via the MCP: the inbox, sending messages, chat agents for SMS and WhatsApp, approvals, escalations, tasks, meetings."
+description: "Technical guide to replies and conversations via the MCP: the inbox, sending messages, approvals, escalations, tasks, meetings."
 ---
 
-# Inbox, chat agents, work items: technical guide
+# Inbox and work items: technical guide
 
 Strategy for answering replies is in `sendora-inbox-business`.
 
@@ -37,37 +37,7 @@ Both reach a real person. Show the user the exact text, recipient and channel, a
 
 ## 2. Chat agents
 
-A chat agent answers messages for a lead on text channels. It starts switched off.
-
-### Create
-
-`edit_conversation` `create_chat_agent` with `name`, `template`, `business` (what the company does) and `channels`. Read back with `read_conversations` `get_chat_agent`, `chat_config`.
-
-### Configure
-
-`edit_conversation` `update_chat_config` changes only what you send, in `chat`:
-
-- `channels`: which accounts and numbers it replies on
-- `followup`: how and when it nudges quiet leads
-- `settings`: tone, length, working hours
-- `actions`: which built-in actions are on (book a meeting, update lead state, escalate)
-- `custom_actions`: `add`, `update` (keyed by id) or `remove` calls to the customer's own URL
-
-`update_chat_agent` changes the name and the instructions (`system_prompt`).
-
-### Test
-
-`edit_conversation` `chat_step` with `action: "test"` or `replay` (re-run a past conversation against the new instructions). `suggest_rules` proposes guardrails from past threads. `test_custom_action` checks a custom action.
-
-### Go live
-
-Ask first. Then `edit_conversation` `set_chat_agent_live`. Verify with `get_chat_agent`.
-
-Start a conversation: `send_outreach` `chat_conversation` for one lead, or `chat_start_many` for up to 25 real chats (needs channel, phones and an opening). Both contact real people. Confirm the list.
-
-### Approvals
-
-If the agent needs a person to approve certain replies, review with `read_conversations` `approvals` and decide with `edit_conversation` `decide_approval` (sendora-inbox-technical).
+Everything about chat agents (creating one, the three ways a conversation starts, actions, follow-ups, limits, testing and going live) is in `sendora-chat-agents-technical`. When a chat agent runs in `draft` mode its replies wait here as drafts: read them with `read_conversations` `get` and send or discard them (`discard_draft`). Tool approvals a chat agent is waiting on are listed in its `chat_config` `approvals`.
 
 ## 3. Approvals, escalations, tasks
 

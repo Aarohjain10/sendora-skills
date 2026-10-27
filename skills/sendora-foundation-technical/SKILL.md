@@ -137,7 +137,7 @@ A table with three columns: area, state, fix. Group into **Blocking**, **Should 
 - **Calls not placed:** agent not published, no number or caller ID, quiet hours, DNC, wallet empty.
 - **SMS not delivered:** registration not approved, number not attached, opt out.
 - **Integration red:** read health, run `check_integration`, ask the owner to reconnect.
-- **AI replies silent:** `ai_reply_paused`, chat agent not live, traffic light on human.
+- **AI replies silent:** `ai_reply_paused`, chat agent not live, traffic light on human. For a chat agent the full list of causes is in `sendora-chat-agents-technical` section 8.
 - **Purchase stuck:** read `purchases` with the operation id before retrying.
 
 ### Report

@@ -32,7 +32,7 @@ Some pointers for choosing:
 Build in whatever order the plan needs, and tell the user what you are doing as you go. Typical pieces, each with the skill that covers it:
 
 - Facts about the business for agents to draw on: a knowledge base (`sendora-voice-technical`).
-- A voice agent if calls are part of the plan: how to write the prompt is in `sendora-voice-business`, the setup in `sendora-voice-technical`. A chat agent for replies is in `sendora-inbox-technical`.
+- A voice agent if calls are part of the plan: how to write the prompt is in `sendora-voice-business`, the setup in `sendora-voice-technical`. A chat agent for SMS and WhatsApp is in `sendora-chat-agents-technical` (setup) and `sendora-chat-agents-business` (what to write). It may not be switched on for the workspace: check with `read_conversations` `list_chat_agents` before offering it.
 - The people to reach: `sendora-leads-technical` covers search, preview and import. Previewing before committing keeps spend under the user's control.
 - The campaign: `sendora-campaigns-technical` and `sendora-campaigns-business`.
 
