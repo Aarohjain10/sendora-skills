@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "sendora": {
+      "type": "http",
+      "url": "https://api.sendora.ai/api/v1/mcp"
+    }
+  }
+}

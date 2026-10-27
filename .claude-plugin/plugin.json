@@ -1,0 +1,9 @@
+{
+  "name": "sendora",
+  "description": "Run outbound on Sendora from your coding agent: skills plus the Sendora MCP connection",
+  "author": {
+    "name": "Sendora"
+  },
+  "homepage": "https://github.com/Aarohjain10/sendora-skills",
+  "version": "1.0.0"
+}

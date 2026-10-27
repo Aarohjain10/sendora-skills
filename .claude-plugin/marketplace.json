@@ -1,0 +1,12 @@
+{
+  "name": "sendora-skills",
+  "description": "Skills and the MCP connection that let a coding agent run outbound on Sendora",
+  "owner": { "name": "Sendora" },
+  "plugins": [
+    {
+      "name": "sendora",
+      "source": "./",
+      "description": "Sendora skills for leads, voice agents, chat agents, campaigns, channels, the inbox, analytics and agency work, with the Sendora MCP connection"
+    }
+  ]
+}
